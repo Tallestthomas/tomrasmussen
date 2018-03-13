@@ -11,11 +11,17 @@ margin: 1rem 0;
 `;
 
 const Button = styled.button`
- color: #b20303;
- border: 1px solid #b20303;
+ color: #990000;
+ border: 1px solid #990000;
  padding: 0.25rem 0.5rem
  background-color: #fff;
  margin: 0 0.25rem;
+ transition: background 0.25s;
+
+&:hover {
+  background-color: #990000;
+  color: #fff;
+}
 `;
 
 class PostTags extends Component {

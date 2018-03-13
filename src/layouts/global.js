@@ -46,7 +46,7 @@ font-family: "Pier"
 }
 
 h1{
-color: #b20303;
+color: #990000;
 font-size: 2.5rem;
 line-height: 1.2;
 }
