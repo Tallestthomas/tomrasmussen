@@ -1,7 +1,6 @@
 {
   "name": "gatsby-starter-advanced",
-  "description":
-    "GatsbyJS starter that includes examples for advanced use cases.",
+  "description": "GatsbyJS starter that includes examples for advanced use cases.",
   "version": "1.1.0",
   "author": "Ruben Harutyunyan <vagr9k@gmail.com>",
   "dependencies": {
@@ -17,6 +16,7 @@
     "gatsby-plugin-react-helmet": "^2.0.3",
     "gatsby-plugin-sharp": "^1.6.24",
     "gatsby-plugin-sitemap": "^1.2.9",
+    "gatsby-plugin-styled-components": "^2.0.9",
     "gatsby-plugin-twitter": "^1.0.14",
     "gatsby-remark-autolink-headers": "^1.4.11",
     "gatsby-remark-copy-linked-files": "^1.5.25",
@@ -32,7 +32,8 @@
     "react-dom": "^15.6.1",
     "react-helmet": "^5.2.0",
     "react-share": "^1.19.0",
-    "react-twitter-widgets": "^1.7.1"
+    "react-twitter-widgets": "^1.7.1",
+    "styled-components": "^3.2.1"
   },
   "devDependencies": {
     "cli-glob": "^0.1.0",
@@ -51,7 +52,9 @@
     "stylelint-config-standard": "^18.0.0",
     "write-good": "^0.11.3"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
@@ -68,6 +71,8 @@
     "format:js": "prettier '**/*.{js,jsx}' --write"
   },
   "remarkConfig": {
-    "plugins": ["remark-preset-lint-recommended"]
+    "plugins": [
+      "remark-preset-lint-recommended"
+    ]
   }
 }

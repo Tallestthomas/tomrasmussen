@@ -1,5 +1,20 @@
 import React from "react";
 import Link from "gatsby-link";
+import styled from 'styled-components';
+
+const ReadMore = styled(Link)`
+ display: inline-block;
+ border: 1px solid #990000;
+ text-decoration: none;
+ margin-top: 1rem;
+ padding: 0.25rem 0.5rem;
+ transition: background 0.25s;
+
+ &:hover {
+ color: #fff;
+ background-color: #990000;
+ }
+`;
 
 class PostListing extends React.Component {
   getPostList() {
@@ -23,12 +38,17 @@ class PostListing extends React.Component {
       <div>
         {/* Your post list here. */
         postList.map(post => (
-          <Link to={post.path} key={post.title}>
-            <h1>{post.title}</h1>
-          </Link>
+        <div>
+          <h1>{post.title}</h1>
+          <p>{post.date}</p>
+          <p>{post.excerpt}</p>
+          <ReadMore to={post.path}>
+            Read More
+          </ReadMore>
+        </div>
         ))}
       </div>
-    );
+      );
   }
 }
 

@@ -6,10 +6,6 @@
     "react/prop-types": "off",
     "react/no-danger": "off"
   },
-  "settings": {
-    "import/core-modules": []
-  },
-  "env": {
-    "browser": true
-  }
+  "settings": {"import/core-modules": []},
+  "env": {"browser": true}
 }
