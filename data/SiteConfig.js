@@ -13,7 +13,7 @@ module.exports = {
   disqusShortname: 'tomrasmussen-me', // Disqus shortname.
   postDefaultCategoryID: 'Tech', // Default category for posts.
   userName: 'TallestThomas', // Username to display in the author segment.
-  userTwitter: 'TallestThomas', // Optionally renders "Follow Me" in the UserInfo segment.
+  userTwitter: '', // Optionally renders "Follow Me" in the UserInfo segment.
   userLocation: 'Long Island, New York', // User location to display in the author segment.
   userAvatar: 'https://api.adorable.io/avatars/150/test.png', // User avatar to display in the author segment.
   userDescription: '', // User description to display in the author segment.
