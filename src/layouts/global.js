@@ -74,4 +74,8 @@ border-radius: 1rem;
 padding: 1rem;
 }
 
+.twitter-follow-button {
+text-align: center;
+}
+
 `;
