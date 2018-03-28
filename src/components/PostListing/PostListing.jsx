@@ -16,6 +16,17 @@ const ReadMore = styled(Link)`
  }
 `;
 
+const PostContainer = styled.div`
+margin: 1rem 0 2rem;
+box-shadow: 1px 2px 3px rgba(0,0,0,0.8);
+padding: 1rem;
+transition: box-shadow 0.25s;
+
+&:hover {
+box-shadow: 5px 5px 7px rgba(0,0,0,0.8);
+}
+`
+
 class PostListing extends React.Component {
   getPostList() {
     const postList = [];
@@ -38,14 +49,14 @@ class PostListing extends React.Component {
       <div>
         {/* Your post list here. */
         postList.map(post => (
-        <div>
+        <PostContainer>
           <h1>{post.title}</h1>
           <p>{post.date}</p>
           <p>{post.excerpt}</p>
           <ReadMore to={post.path}>
             Read More
           </ReadMore>
-        </div>
+        </PostContainer>
         ))}
       </div>
       );
