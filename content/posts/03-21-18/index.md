@@ -2,7 +2,7 @@
 title: "Let's try this again"
 cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "03/21/2018"
-category: "tech"
+category: "Tech"
 tags:
     - programming
     - stuff
