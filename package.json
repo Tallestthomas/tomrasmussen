@@ -28,7 +28,7 @@
     "lodash": "^4.17.5",
     "lodash-webpack-plugin": "^0.11.4",
     "react": "^15.6.2",
-    "react-disqus-comments": "^1.1.1",
+    "react-disqus-comments": "github:theplatapi/react-disqus-thread",
     "react-dom": "^15.6.2",
     "react-helmet": "^5.2.0",
     "react-share": "^1.19.0",
