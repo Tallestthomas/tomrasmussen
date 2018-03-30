@@ -27,8 +27,7 @@ class Disqus extends Component {
       return null;
     }
     const post = postNode.frontmatter;
-    const url = config.siteUrl + postNode.fields.slug + '/';
-    console.log(url);
+    const url = config.siteUrl + postNode.fields.slug;
     return (
       <ReactDisqusComments
         shortname={config.disqusShortname}
