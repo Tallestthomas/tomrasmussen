@@ -1,5 +1,5 @@
 ---
-title: "Find our way with array.map"
+title: "Finding our way with array.map"
 date: "04/24/2018"
 category: "Tech"
 tags:
