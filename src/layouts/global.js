@@ -51,8 +51,9 @@ font-size: 2.5rem;
 line-height: 1.2;
 }
 
-h2{
-margin: 0.5rem 0;
+h2,
+h3{
+margin: 0.75rem 0;
 }
 
 p{
@@ -76,6 +77,10 @@ padding: 1rem;
 
 .twitter-follow-button {
 text-align: center;
+}
+
+.gatsby-highlight{
+  margin: 1.5rem 0;
 }
 
 `;
