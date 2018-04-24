@@ -2,6 +2,7 @@
 title: "Finding our way with array.map"
 date: "04/24/2018"
 category: "Tech"
+slug: "Finding-our-way-with-array-map"
 tags:
   - programming
   - javascript
