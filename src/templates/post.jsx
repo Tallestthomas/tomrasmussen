@@ -50,7 +50,7 @@ export default class PostTemplate extends React.Component {
           <Disqus postNode={postNode}/>
         </div>
       </div>
-    );
+      );
   }
 }
 
@@ -67,6 +67,7 @@ export const pageQuery = graphql`
         date
         category
         tags
+        slug
       }
       fields {
         slug
