@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import Link from 'gatsby-link';
 import styled from 'styled-components';
-import UserInfo from "../components/UserInfo/UserInfo";
+import { DiscussionEmbed } from 'disqus-react';
 import PostTags from "../components/PostTags/PostTags";
 import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
@@ -32,6 +32,11 @@ export default class PostTemplate extends React.Component {
     if (!post.category_id) {
       post.category_id = config.postDefaultCategoryID;
     }
+    const disqusConfig = {
+      identifier : post.slug,
+      title: post.title
+    }
+
     return (
       <div>
         <Helmet>
@@ -45,6 +50,7 @@ export default class PostTemplate extends React.Component {
           <div className="post-meta">
             <PostTags tags={post.tags} />
             <SocialLinks postPath={slug} postNode={postNode} />
+            <DiscussionEmbed shortname={config.disqusShortname} config={disqusConfig} />
           </div>
         </div>
       </div>
