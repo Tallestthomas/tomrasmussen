@@ -1,12 +1,15 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import { CommentCount } from 'disqus-react';
 import styled from 'styled-components';
+import config from '../../../data/SiteConfig';
 
 const ReadMore = styled(Link)`
   display: inline-block;
   border: 1px solid #990000;
   text-decoration: none;
   margin-top: 1rem;
+  margin-right: 1rem;
   padding: 0.25rem 0.5rem;
   transition: background 0.25s;
 
@@ -48,14 +51,21 @@ class PostListing extends React.Component {
     return (
       <div>
         {/* Your post list here. */
-        postList.map(post => (
+        postList.map(post => {
+        const disqusConfig = {
+          identifier: post.path.substring(1),
+          title: post.title
+        }
+        return(
           <PostContainer key={post.date}>
             <h1>{post.title}</h1>
-            <p>{post.date}</p>
+            <p>{post.date} <span style={{marginLeft: '2rem'}}>{post.timeToRead} minute read</span></p>
             <p>{post.excerpt}</p>
             <ReadMore to={post.path}>Read More</ReadMore>
+            <CommentCount shortname={config.disqusShortname} config={disqusConfig} />
           </PostContainer>
-        ))}
+          )}
+          )}
       </div>
     );
   }
