@@ -90,13 +90,12 @@ pair inside of an array of objects.
 While you can use the classic `function` syntax for your callback, I much
 prefer to use ES6's arrow functions, it just looks cleaner.
 
-## Uses for map
+## A more practical use for map
 
 So, we've looked at a very basic example of what this could be used for, but
 let's see what it could be used for in a React Component.
 
 ```javascript
-
 class SampleComponent extends React.Component{
   state = {
     users: [
@@ -121,7 +120,7 @@ class SampleComponent extends React.Component{
         <ul>
           {
             this.state.users.map( (user, id) => (
-              <li key={id}>{ user.firstName } {user.email}</li>
+              <li key={id}>{ user.firstName } { user.email }</li>
               )
             );
           }
@@ -134,16 +133,12 @@ class SampleComponent extends React.Component{
 
 Here, we used the **map** function to iterate through the ` users ` array and
 return each one as an ` <li> ` element containing each object's values.
-<br/>
-<br/>
-Again, this is a pretty basic sample usage of the map function, but it is very flexible and useful, especially when combined with some of the other functions, such as `filter` (which I will be covering in the next post), and reduce.
-<br/>
-<br/>
-Well, I hope you learned something, this is my first real attempt at
-explaining some code via a blog post, so it should get better in time. But, if you have any questions, feel free to leave a comment, reach out to me on [Twitter]( https://twitter.com/tallestthomas ), or shoot me a DM on [Instagram](https://instagram.com/tallestthomas).
-<br />
-<br />
-Until next time,
 
+Again, this is a pretty basic sample usage of the map function, but it is very flexible and useful, especially when combined with some of the other functions, such as `filter` (which I will be covering in the next post), and `reduce`.
+
+Well, I hope you learned something, this is my first real attempt at
+explaining some code via a blog post, so it should get better in time. But, if you have any questions feel free to reach out to me on [Twitter]( https://twitter.com/tallestthomas ) or shoot me a DM on [Instagram](https://instagram.com/tallestthomas).
+
+Until next time,<br/>
 -TT
 

@@ -60,6 +60,10 @@ p{
 font-size: 1.2rem;
 }
 
+p {
+  margin: 1rem auto;
+}
+
 
 a {
 color: #990000;

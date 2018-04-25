@@ -2,7 +2,6 @@ import React from "react";
 import Helmet from "react-helmet";
 import Link from 'gatsby-link';
 import styled from 'styled-components';
-import Disqus from '../components/Disqus/Disqus';
 import UserInfo from "../components/UserInfo/UserInfo";
 import PostTags from "../components/PostTags/PostTags";
 import SocialLinks from "../components/SocialLinks/SocialLinks";
@@ -47,7 +46,6 @@ export default class PostTemplate extends React.Component {
             <PostTags tags={post.tags} />
             <SocialLinks postPath={slug} postNode={postNode} />
           </div>
-          <Disqus postNode={postNode}/>
         </div>
       </div>
       );
