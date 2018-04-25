@@ -22,22 +22,22 @@ module.exports = {
     {
       label: 'GitHub',
       url: 'https://github.com/tallestthomas',
-      iconClassName: 'fa fa-2x fa-github',
+      path: '/social/github.svg',
     },
     {
       label: 'Twitter',
       url: 'https://twitter.com/tallestthomas',
-      iconClassName: 'fa fa-2x fa-twitter',
+      path: '/social/twitter.svg',
     },
     {
       label: 'Instagram',
       url: 'https://instagram.com/tallestthomas',
-      iconClassName: 'fa fa-2x fa-instagram',
+      path: '/social/instagram.svg',
     },
     {
       label: 'Email',
       url: 'mailto:info@tomrasmussen.me',
-      iconClassName: 'fa fa-2x fa-envelope',
+      path: '/social/email.svg',
     },
   ],
   copyright: 'Copyright Tom Rasmussen © 2018.', // Copyright string for the footer of the website and RSS feed.
