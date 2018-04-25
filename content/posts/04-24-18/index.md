@@ -137,7 +137,7 @@ return each one as an ` <li> ` element containing each object's values.
 Again, this is a pretty basic sample usage of the map function, but it is very flexible and useful, especially when combined with some of the other functions, such as `filter` (which I will be covering in the next post), and `reduce`.
 
 Well, I hope you learned something, this is my first real attempt at
-explaining some code via a blog post, so it should get better in time. But, if you have any questions feel free to reach out to me on [Twitter]( https://twitter.com/tallestthomas ) or shoot me a DM on [Instagram](https://instagram.com/tallestthomas).
+explaining some code via a blog post, so it should get better in time. But, if you have any questions feel free to leave a comment below, reach out to me on [Twitter]( https://twitter.com/tallestthomas ) or shoot me a DM on [Instagram](https://instagram.com/tallestthomas).
 
 Until next time,<br/>
 -TT
