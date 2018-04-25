@@ -13,7 +13,7 @@ display: inline-block;
   display: inline-block;
   max-width: 50px;
 
-  svg {
+  svg, img {
     width: 100%;
     height: 35px;
     width: 35px;
@@ -40,12 +40,12 @@ display: inline-block;
 class UserLinks extends Component {
   getLinkElements() {
     const { userLinks } = this.props.config;
-    const { labeled } = this.props;
     return userLinks.map(link => (
       <Links key={link.label} href={link.url} target="_blank" rel="noopener">
         <SVG
           src={link.path}
           className='socialIcon'
+          preloader={<img src={link.path} alt={link.label} />}
         />
       </Links>
     ));
