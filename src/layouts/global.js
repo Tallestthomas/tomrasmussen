@@ -87,4 +87,17 @@ text-align: center;
   margin: 1.5rem 0;
 }
 
+blockquote {
+  background-color: #eee;
+  p {
+  margin: 0;
+  color: #555 !important;
+  padding-left: 1rem;
+  }
+
+  & > blockquote {
+    border-radius: none;
+    font-style: italic !important;
+  }
+}
 `;
