@@ -92,4 +92,11 @@ blockquote {
     font-style: italic !important;
   }
 }
+
+img {
+display: block;
+width: 100%;
+max-width: 100%;
+height: auto !important;
+}
 `;
