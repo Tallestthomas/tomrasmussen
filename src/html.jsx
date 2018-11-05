@@ -10,7 +10,7 @@ if (process.env.NODE_ENV === "production") {
     /* eslint import/no-webpack-loader-syntax: off */
     inlinedStyles = require("!raw-loader!../public/styles.css");
   } catch (e) {
-    /* eslint no-console: "off"*/
+    /* eslint no-console: "off" */
     console.log(e);
   }
 }
@@ -36,6 +36,7 @@ export default class HTML extends React.Component {
           />
           {this.props.headComponents}
           <link rel="shortcut icon" href={favicon} />
+          <link preload href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
           {css}
         </head>
         <body>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ShareButtons, 
+import {  
   FacebookIcon,
   FacebookShareButton,
   FacebookShareCount,
@@ -67,9 +67,6 @@ class SocialLinks extends Component {
             {count => <div className="share-count">{filter(count)}</div>}
           </LinkedinShareCount>
         </LinkedinShareButton>
-        <TelegramShareButton url={url}>
-          <TelegramIcon round size={iconSize} />
-        </TelegramShareButton>
       </SocialLinksContainer>
         );
   }
