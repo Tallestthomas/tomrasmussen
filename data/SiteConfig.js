@@ -4,7 +4,7 @@ module.exports = {
   siteTitleAlt: 'Tom Rasmussen Javascript Developer', // Alternative site title for SEO.
   siteLogo: '/logos/logo-1024.png', // Logo used for SEO and manifest.
   siteUrl: 'https://tomrasmussen.me', // Domain of your website without pathPrefix.
-  pathPrefix: '/blog', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
+  pathPrefix: '/', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription:
     'Personal blog of Tom Rasmussen, Full Stack Javscript Developer', // Website description used for RSS feeds/meta description tag.
   siteRss: '/rss.xml', // Path to the RSS file.

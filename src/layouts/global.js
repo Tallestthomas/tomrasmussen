@@ -3,16 +3,7 @@ import fonts from '../assets/fonts';
 
 export default injectGlobal`
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
-@font-face {
-font-family: "Pier";
- src: url(${fonts.PierWOFF2}) format('woff2'),
- url(${fonts.PierWOFF}) format('woff'),
- url(${fonts.PierTTF}) format('ttf');
- font-weight: normal;
- font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
 :root {
 font-size: 16px;
@@ -26,7 +17,7 @@ margin: 0;
 
 html, body {
 height: 100%;
-font-family: 'Open Sans';
+font-family: 'Open Sans', arial, sans-serif;
 }
 
 body {
@@ -42,7 +33,8 @@ h1,
 h2,
 h3,
 h4 { 
-font-family: "Pier"
+font-family: "Open Sans", arial, sans-serif;
+font-weight: 700;
 }
 
 h1{
@@ -99,5 +91,12 @@ blockquote {
     border-radius: none;
     font-style: italic !important;
   }
+}
+
+img {
+display: block;
+width: 100%;
+max-width: 100%;
+height: auto !important;
 }
 `;
