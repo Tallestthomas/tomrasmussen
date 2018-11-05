@@ -1,5 +1,4 @@
 const path = require('path');
-const _ = require('lodash');
 const webpackLodashPlugin = require('lodash-webpack-plugin');
 
 exports.onCreateNode = ({node, boundActionCreators, getNode}) => {
@@ -12,13 +11,13 @@ exports.onCreateNode = ({node, boundActionCreators, getNode}) => {
       Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
       Object.prototype.hasOwnProperty.call(node.frontmatter, 'slug')
     ) {
-      slug = `/${_.kebabCase(node.frontmatter.slug)}`;
+      slug = `/${node.frontmatter.slug}`;
     }
     if (
       Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
       Object.prototype.hasOwnProperty.call(node.frontmatter, 'title')
     ) {
-      slug = `/${_.kebabCase(node.frontmatter.title)}`;
+      slug = `/${node.frontmatter.title.replace('/\s+/g', '-')}`;
     } else if (parsedFilePath.name !== 'index' && parsedFilePath.dir !== '') {
       slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
     } else if (parsedFilePath.dir === '') {
@@ -58,7 +57,7 @@ exports.createPages = ({graphql, boundActionCreators}) => {
         `,
       ).then(result => {
         if (result.errors) {
-          /* eslint no-console: "off"*/
+          /* eslint no-console: "off" */
           console.log(result.errors);
           reject(result.errors);
         }
@@ -88,7 +87,7 @@ exports.createPages = ({graphql, boundActionCreators}) => {
         const tagList = Array.from(tagSet);
         tagList.forEach(tag => {
           createPage({
-            path: `/tags/${_.kebabCase(tag)}/`,
+            path: `/tags/${tag.replace('/\s+g', '-')}/`,
             component: tagPage,
             context: {
               tag,
@@ -99,7 +98,7 @@ exports.createPages = ({graphql, boundActionCreators}) => {
         const categoryList = Array.from(categorySet);
         categoryList.forEach(category => {
           createPage({
-            path: `/categories/${_.kebabCase(category)}/`,
+            path: `/categories/${category.replace('/\s+g', '-')}/`,
             component: categoryPage,
             context: {
               category,
@@ -111,8 +110,3 @@ exports.createPages = ({graphql, boundActionCreators}) => {
   });
 };
 
-exports.modifyWebpackConfig = ({config, stage}) => {
-  if (stage === 'build-javascript') {
-    config.plugin('Lodash', webpackLodashPlugin, null);
-  }
-};
