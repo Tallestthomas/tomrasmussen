@@ -6,7 +6,8 @@ import { postListing,
   postListingWrapper, 
   postListingLatestPost,
   postListingMeta,
-  postListingTitle
+  postListingTitle,
+  postListingReadMore
 } from './postlisting.module.scss';
 
 class PostListing extends React.Component {
@@ -53,7 +54,7 @@ class PostListing extends React.Component {
                   </span>
                 </p>
                 <p>{post.excerpt}</p>
-                <Link to={post.path}>Read More</Link>
+                <Link to={post.path} className={postListingReadMore}>Read More</Link>
                 <CommentCount shortname={config.disqusShortname} config={disqusConfig} />
               </div>
             )}

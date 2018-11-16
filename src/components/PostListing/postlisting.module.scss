@@ -38,6 +38,22 @@
   transition: color 0.25s ease-in-out;
 
   &:hover {
-    color: #C62641;
+    color: #c62641;
+  }
+}
+
+.post-listing-read-more {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #c62641;
+  padding: 0.7rem 1.5rem;
+  color: #fefefe;
+  transition:
+    box-shadow 0.25s ease-in-out,
+    transform 0.25s ease-in-out;
+
+  &:hover {
+    box-shadow: 1px 4px 8px #aaa;
+    transform: scale(1.02);
   }
 }

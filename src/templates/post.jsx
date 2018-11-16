@@ -5,9 +5,10 @@ import { DiscussionEmbed } from 'disqus-react';
 import PostTags from "../components/PostTags/PostTags";
 import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
+import { postContainer, postLayout, postMeta } from '../styles/post.module.scss';
 import './gruvbox.css';
+import Hero from '../components/Hero'
 import config from "../../data/SiteConfig";
-
 
 export default class PostTemplate extends React.Component {
   render() {
@@ -31,18 +32,27 @@ export default class PostTemplate extends React.Component {
           <title>{`${post.title} | ${config.siteTitle}`}</title>
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
-        <div>
-          <Link to="/">Go back home</Link>
-          <title>{post.title}</title>
-          <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-          <div className="post-meta">
-            <PostTags tags={post.tags} />
-            <SocialLinks postPath={slug} postNode={postNode} />
-            <DiscussionEmbed shortname={config.disqusShortname} config={disqusConfig} />
+        <Hero />
+        <div className={postLayout}>
+          <div className={postContainer}>
+            <h1>{post.title}</h1>
+            <p>
+              {post.date}
+              <span>/<span>
+              {postNode.timeToRead}
+              {' '}
+minute read
+            </p>
+            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+            <div className={postMeta}>
+              <PostTags tags={post.tags} />
+              <SocialLinks postPath={slug} postNode={postNode} />
+              <DiscussionEmbed shortname={config.disqusShortname} config={disqusConfig} />
+            </div>
           </div>
         </div>
       </div>
-      );
+    );
   }
 }
 
@@ -52,7 +62,6 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       timeToRead
-      excerpt
       frontmatter {
         title
         cover

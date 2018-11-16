@@ -6,7 +6,6 @@ import Hero from '../components/Hero';
 import PostListing from "../components/PostListing/PostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
-import UserLinks from '../components/UserLinks/UserLinks';
 
 import '../styles/global.scss';
 
