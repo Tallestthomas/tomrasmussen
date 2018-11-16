@@ -2,6 +2,12 @@ import React from 'react';
 import Link from 'gatsby-link';
 import { CommentCount } from 'disqus-react';
 import config from '../../../data/SiteConfig';
+import { postListing, 
+  postListingWrapper, 
+  postListingLatestPost,
+  postListingMeta,
+  postListingTitle
+} from './postlisting.module.scss';
 
 class PostListing extends React.Component {
   getPostList() {
@@ -20,7 +26,10 @@ class PostListing extends React.Component {
   render() {
     const postList = this.getPostList();
     return (
-      <div>
+      <div className={postListingWrapper}>
+        <p className={postListingLatestPost}>
+          Latest Posts
+        </p>
         {/* Your post list here. */
           postList.map(post => {
             const disqusConfig = {
@@ -28,9 +37,13 @@ class PostListing extends React.Component {
               title: post.title
             }
             return(
-              <div key={post.date}>
-                <h1>{post.title}</h1>
-                <p>
+              <div key={post.date} className={postListing}>
+                <h1 className={postListingTitle}>
+                  <Link to={post.path}>
+                    {post.title}
+                  </Link>
+                </h1>
+                <p className={postListingMeta}>
                   {post.date} 
                   {' '}
                   <span style={{marginLeft: '2rem'}}>

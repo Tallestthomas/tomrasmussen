@@ -36,7 +36,7 @@ export default class HTML extends React.Component {
           />
           {this.props.headComponents}
           <link rel="shortcut icon" href={favicon} />
-          <link preload href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Lora|Roboto:400,700" rel="stylesheet">
           {css}
         </head>
         <body>

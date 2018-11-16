@@ -1,0 +1,43 @@
+.post-listing-wrapper {
+  background: #fefefe;
+  padding-top: 5rem;
+  max-width: 1130px;
+  margin: 0 auto;
+  box-shadow: 0 30px 50px 0 rgba(1, 1, 1, 0.15);
+  position: relative;
+  top: -100px;
+  z-index: 999;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.post-listing { 
+  padding-top: 1rem;
+  max-width: 720px;
+  padding-bottom: 8rem;
+  margin-bottom: 9rem;
+}
+
+.post-listing-latest-post {
+  font-family: 'Roboto', Sans-Serif;
+  border-bottom: 2px #333 solid;
+  font-size: 1rem;
+  margin-bottom: 8rem;
+}
+
+.post-listing-meta {
+  margin: 0.5rem 0; 
+  color: #999;
+  font-family: 'Roboto', Sans-Serif;
+}
+
+.post-listing-title a{
+  color: #333;
+  text-decoration: none;
+  transition: color 0.25s ease-in-out;
+
+  &:hover {
+    color: #C62641;
+  }
+}

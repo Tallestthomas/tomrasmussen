@@ -6,24 +6,30 @@
 
 body {
   font-size: 16px;
+  color: #333333;
 }
 
 p {
+  font-family: 'Lora', Serif;
   font-size: 20px;
   line-height: 1.7rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Roboto', Sans-Serif;
 }
 
 @media screen and (min-width: 769px) {
   h1 {
     font-size: 3rem;
-    line-height: 1.05rem;
+    line-height: 1.05;
     margin: 10px 0;
   }
 
   h2 {
     font-size: 2.25rem;
-    line-height: 1.25rem;
+    line-height: 1.25;
   }
 
   h3 {
@@ -33,29 +39,29 @@ p {
 
   h4 {
     font-size: 1.125rem;
-    line-height: 1.2222rem;
+    line-height: 1.2222;
   }
 }
 
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 2.5rem;
-    line-height: 1.125rem;
+    line-height: 1.125;
   }
 
   h2 {
     font-size: 2rem;
-    line-height: 1.25rem;
+    line-height: 1.25;
   }
 
   h3 {
     font-size: 1.5rem;
-    line-height: 1.25rem;
+    line-height: 1.25;
   }
 
   h4 {
     font-size: 1.125rem;
-    line-height: 1.2222rem;
+    line-height: 1.2222;
   }
 }
 

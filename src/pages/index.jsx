@@ -20,8 +20,7 @@ class Index extends React.Component {
         <SEO postEdges={postEdges} />
         <Hero>
           <h1>Hello, I&apos;m Tom</h1>
-          <p>I&apos;m a fullstack javascript developer and I like to share my adventures in life and code.</p>
-          <UserLinks config={config} />
+          <h3>I&apos;m a fullstack javascript developer and I like to share my adventures in life and code.</h3>
         </Hero>
         <Layout currentPath={this.props.location.pathname}>
           <PostListing postEdges={postEdges} />
@@ -45,7 +44,7 @@ export const pageQuery = graphql`
           fields {
             slug
           }
-          excerpt
+          excerpt(pruneLength: 200)
           timeToRead
           frontmatter {
             title
