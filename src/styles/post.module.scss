@@ -3,6 +3,7 @@
 
 .post-layout {
   @extend .layout;
+
   top: 25vh;
 }
 
@@ -11,6 +12,14 @@
 
   * {
     max-width: 720px;
+  }
+
+  img {
+    margin: 3rem 0;
+  }
+
+  code[class*='language-'] {
+    padding: 0.25rem 0.5rem;
   }
 }
 

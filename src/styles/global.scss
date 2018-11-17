@@ -6,7 +6,7 @@
 
 body {
   font-size: 16px;
-  color: #444444;
+  color: #444;
 }
 
 p {
@@ -18,9 +18,43 @@ p {
 
 a {
   text-decoration: none;
+  color: #c62641;
+  font-weight: bold;
+  text-shadow:
+    0 -2px 0 white,
+    0 -1px 0 white,
+    0 0 0 white,
+    2px -2px 0 white,
+    2px -1px 0 white,
+    2px 0 0 white,
+    -2px -2px 0 white,
+    -2px -1px 0 white,
+    -2px 0 0 white,
+    1px -2px 0 white,
+    1px -1px 0 white,
+    1px 0 0 white,
+    -1px -2px 0 white,
+    -1px -1px 0 white,
+    -1px 0 0 white,
+    0 -2px 0 white,
+    0 -1px 0 white,
+    0 0 0 white;
+  box-shadow:
+    0 -1px 0 0 white inset,
+    0 -2px 0 0 transparent inset;
 }
 
-h1, h2, h3, h4 {
+a:hover {
+  transition: all 0.3s ease-out;
+  box-shadow:
+    0 -1px 0 0 white inset,
+    0 -2px 0 0 #c62641 inset;
+}
+
+h1,
+h2,
+h3,
+h4 {
   font-family: 'Arvo', Serif;
 }
 
@@ -33,6 +67,7 @@ h1, h2, h3, h4 {
   h2 {
     font-size: 2.25rem;
     margin: 1rem 0;
+    margin-top: 3rem;
   }
 
   h3 {

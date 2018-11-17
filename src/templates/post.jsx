@@ -38,7 +38,7 @@ export default class PostTemplate extends React.Component {
             <h1>{post.title}</h1>
             <p>
               {post.date}
-              <span>/<span>
+              <span>/</span>
               {postNode.timeToRead}
               {' '}
 minute read
