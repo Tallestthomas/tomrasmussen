@@ -1,0 +1,17 @@
+.header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  top: 0;
+  padding: 0.5rem 1rem;
+  color: #fefefe;
+  background-color: #c62641;
+}
+
+.header-brand {
+  align-self: flex-start;
+}
+
+.header-nav {
+  margin-left: auto;
+}
