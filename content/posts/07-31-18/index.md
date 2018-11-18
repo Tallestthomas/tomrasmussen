@@ -3,7 +3,7 @@ title: "Why you should (probably not) use Vim"
 date: "07/31/2018"
 category: "Tech"
 slug: "why-you-should-probably-not-use-vim"
-tag:
+tags:
   - programming
   - javascript
   - vim
