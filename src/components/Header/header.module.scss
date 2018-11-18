@@ -1,11 +1,53 @@
 .header {
   position: fixed;
   width: 100%;
-  display: flex;
+  z-index: 2000;
   top: 0;
-  padding: 0.5rem 1rem;
   color: #fefefe;
   background-color: #c62641;
+
+  a {
+    text-decoration: none;
+    color: #fefefe;
+    font-weight: bold;
+    text-shadow:
+      0 -2px 0 #c62641,
+      0 -1px 0 #c62641,
+      0 0 0 #c62641,
+      2px -2px 0 #c62641,
+      2px -1px 0 #c62641,
+      2px 0 0 #c62641,
+      -2px -2px 0 #c62641,
+      -2px -1px 0 #c62641,
+      -2px 0 0 #c62641,
+      1px -2px 0 #c62641,
+      1px -1px 0 #c62641,
+      1px 0 0 #c62641,
+      -1px -2px 0 #c62641,
+      -1px -1px 0 #c62641,
+      -1px 0 0 #c62641,
+      0 -2px 0 #c62641,
+      0 -1px 0 #c62641,
+      0 0 0 #c62641;
+    box-shadow:
+      0 -1px 0 0 #c62641 inset,
+      0 -2px 0 0 transparent inset;
+
+    &:hover {
+      transition: all 0.3s ease-out;
+      box-shadow:
+        0 -1px 0 0 #c62641 inset,
+        0 -2px 0 0 #fefefe inset;
+    }
+  }
+}
+
+.header-wrapper {
+  display: flex;
+  max-width: 1130px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 .header-brand {

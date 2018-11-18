@@ -10,12 +10,20 @@
 .post-container {
   @extend .post-listing-wrapper;
 
+  padding: 1rem;
+
   * {
     max-width: 720px;
   }
 
+  h1 {
+    text-align: center;
+  }
+
   img {
     margin: 3rem 0;
+    display: block;
+    width: 100%;
   }
 
   code[class*='language-'] {
@@ -24,12 +32,22 @@
 }
 
 .post-meta {
-  margin: 0 auto;
+  margin: 2rem auto;
   max-width: 100%;
   width: 100%;
   padding-bottom: 9rem;
 
   & > * {
     margin: 0 auto;
+  }
+}
+
+.post-info {
+  font-style: italic;
+  font-size: 16px;
+  color: #999;
+
+  span {
+    margin: 0 1rem;
   }
 }

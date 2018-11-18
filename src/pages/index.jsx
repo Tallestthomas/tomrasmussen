@@ -19,7 +19,9 @@ class Index extends React.Component {
         <SEO postEdges={postEdges} />
         <Hero>
           <h1>Hello, I&apos;m Tom</h1>
-          <h3>I&apos;m a fullstack javascript developer and I like to share my adventures in life and code.</h3>
+          <h3>
+I&apos;m a Javascript developer in Charlotte, NC.  I love code, command line, and pretty much anything tech
+          </h3>
         </Hero>
         <Layout currentPath={this.props.location.pathname}>
           <PostListing postEdges={postEdges} />

@@ -1,14 +1,15 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import { DiscussionEmbed } from 'disqus-react';
 import PostTags from "../components/PostTags/PostTags";
 import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
-import { postContainer, postLayout, postMeta } from '../styles/post.module.scss';
+import { postContainer, postInfo, postLayout, postMeta } from '../styles/post.module.scss';
 import './gruvbox.css';
 import Hero from '../components/Hero'
 import config from "../../data/SiteConfig";
+import Header from "../components/Header";
 
 export default class PostTemplate extends React.Component {
   render() {
@@ -32,11 +33,12 @@ export default class PostTemplate extends React.Component {
           <title>{`${post.title} | ${config.siteTitle}`}</title>
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
+        <Header />
         <Hero />
         <div className={postLayout}>
           <div className={postContainer}>
             <h1>{post.title}</h1>
-            <p>
+            <p className={postInfo}>
               {post.date}
               <span>/</span>
               {postNode.timeToRead}
