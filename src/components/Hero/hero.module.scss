@@ -1,0 +1,36 @@
+.hero {
+  position: fixed;
+  background: #c62641;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  color: #fefefe;
+  padding: 1rem;
+  text-align: center;
+
+  &::before {
+    content: '';
+    height: 110vh;
+    position: absolute;
+  }
+
+  .content {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 720px;
+
+    h3 {
+      line-height: 1.2;
+    }
+  }
+}

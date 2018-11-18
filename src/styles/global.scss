@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  color: #444;
+}
+
+p {
+  font-family: 'Lato', Sans-Serif;
+  font-size: 20px;
+  line-height: 1.7rem;
+  margin: 1rem 0;
+}
+
+a {
+  text-decoration: none;
+  color: #c62641;
+  font-weight: bold;
+  text-shadow:
+    0 -2px 0 white,
+    0 -1px 0 white,
+    0 0 0 white,
+    2px -2px 0 white,
+    2px -1px 0 white,
+    2px 0 0 white,
+    -2px -2px 0 white,
+    -2px -1px 0 white,
+    -2px 0 0 white,
+    1px -2px 0 white,
+    1px -1px 0 white,
+    1px 0 0 white,
+    -1px -2px 0 white,
+    -1px -1px 0 white,
+    -1px 0 0 white,
+    0 -2px 0 white,
+    0 -1px 0 white,
+    0 0 0 white;
+  box-shadow:
+    0 -1px 0 0 white inset,
+    0 -2px 0 0 transparent inset;
+}
+
+a:hover {
+  transition: all 0.3s ease-out;
+  box-shadow:
+    0 -1px 0 0 white inset,
+    0 -2px 0 0 #c62641 inset;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Arvo', Serif;
+}
+
+@media screen and (min-width: 769px) {
+  h1 {
+    font-size: 3rem;
+    margin: 10px 0;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+    margin: 1rem 0;
+    margin-top: 3rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+    margin: 1rem 0;
+  }
+
+  h4 {
+    font-size: 1.125rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.125;
+  }
+
+  h2 {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.125rem;
+  }
+}
+

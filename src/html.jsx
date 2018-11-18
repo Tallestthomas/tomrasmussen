@@ -10,7 +10,7 @@ if (process.env.NODE_ENV === "production") {
     /* eslint import/no-webpack-loader-syntax: off */
     inlinedStyles = require("!raw-loader!../public/styles.css");
   } catch (e) {
-    /* eslint no-console: "off"*/
+    /* eslint no-console: "off" */
     console.log(e);
   }
 }
@@ -18,6 +18,7 @@ if (process.env.NODE_ENV === "production") {
 export default class HTML extends React.Component {
   render() {
     let css;
+    const { postBodyComponents, headComponents, body } = this.props;
     if (process.env.NODE_ENV === "production") {
       css = (
         <style
@@ -34,16 +35,17 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
-          {this.props.headComponents}
+          {headComponents}
           <link rel="shortcut icon" href={favicon} />
+          <link href="https://fonts.googleapis.com/css?family=Arvo|Lato" rel="stylesheet" />
           {css}
         </head>
         <body>
           <div
             id="___gatsby"
-            dangerouslySetInnerHTML={{ __html: this.props.body }}
+            dangerouslySetInnerHTML={{ __html: body }}
           />
-          {this.props.postBodyComponents}
+          {postBodyComponents}
         </body>
       </html>
     );

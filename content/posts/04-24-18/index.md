@@ -13,7 +13,7 @@ as a Front End javascript developer, but the roles in another state, so I've had
 
 ## So, we're going to start talking about Array Methods
 
-When ES5 javascript rolled out, it introduced a bunch of new methods for Arrays that make life much simpler.  There are three major ones that are constantly used **map, filter, reduce**. These functions are mainly quality of life improvements that help reduce the amount of code we have to write in order to work with arrays.
+When ES5 javascript rolled out, it introduced a bunch of new methods for Arrays that make life much simpler. There are three major ones that are constantly used **map, filter, reduce**. These functions are mainly quality of life improvements that help reduce the amount of code we have to write in order to work with arrays.
 
 ## Map, what does it do?
 
@@ -34,11 +34,11 @@ would take a bit of code.
 ```javascript
 const array_one = [1, 2, 3, 4, 5];
 
-function addFourToArray( array ) {
-  let new_array = []
-    for(i = 0; i < array.length;  i++) {
-      new_array.push(array[i] + 4);
-    }
+function addFourToArray(array) {
+  let new_array = [];
+  for (i = 0; i < array.length; i++) {
+    new_array.push(array[i] + 4);
+  }
 
   return new_array;
 }
@@ -56,7 +56,7 @@ be this:
 ```javascript
 const array_one = [1, 2, 3, 4, 5];
 
-const array_two = array_one.map( number => number + 4);
+const array_two = array_one.map(number => number + 4);
 ```
 
 Yup, that's it. That's everything you need to do for that, super simple, right?
@@ -70,11 +70,11 @@ Let's take the time to break this down a little farther so we can understand wha
   }[, this]);
 ```
 
-Taking away the arrow function makes things a little clearer.The map function does the exact same thing as our `addFourToArray` function but in a much more flexible manner. 
+Taking away the arrow function makes things a little clearer.The map function does the exact same thing as our `addFourToArray` function but in a much more flexible manner.
 <br />
 <br />
 When you call **map** you must declare a callback function which in turn takes the argument of the `currentValue`, with the optional values of
-`index` ( where `i = 0;` would be in a for loop), and `array` which would be an instance of the original array. 
+`index` ( where `i = 0;` would be in a for loop), and `array` which would be an instance of the original array.
 <br />
 <br />
 The map function also takes a secondary argument which
@@ -84,7 +84,7 @@ would be what you want to bind as `this` when executing the callback.
 After you've passed in your arguments, you can do whatever you would like to the
 `currentValue`, and all you have to do now is return some sort of value. Doing
 things like converting strings from lowercase to all uppercase, changing an array of temperatures from Celsius to Fahrenheit, or changing a certain key: value
-pair inside of an array of objects. 
+pair inside of an array of objects.
 <br />
 <br />
 While you can use the classic `function` syntax for your callback, I much
@@ -99,7 +99,7 @@ let's see what it could be used for in a React Component.
 class SampleComponent extends React.Component{
   state = {
     users: [
-      { 
+      {
         firstName: 'Tom',
         email: 'tom@example.com'
       },
@@ -131,14 +131,13 @@ class SampleComponent extends React.Component{
 }
 ```
 
-Here, we used the **map** function to iterate through the ` users ` array and
-return each one as an ` <li> ` element containing each object's values.
+Here, we used the **map** function to iterate through the `users` array and
+return each one as an `<li>` element containing each object's values.
 
 Again, this is a pretty basic sample usage of the map function, but it is very flexible and useful, especially when combined with some of the other functions, such as `filter` (which I will be covering in the next post), and `reduce`.
 
 Well, I hope you learned something, this is my first real attempt at
-explaining some code via a blog post, so it should get better in time. But, if you have any questions feel free to leave a comment below, reach out to me on [Twitter]( https://twitter.com/tallestthomas ) or shoot me a DM on [Instagram](https://instagram.com/tallestthomas).
+explaining some code via a blog post, so it should get better in time. But, if you have any questions feel free to leave a comment below, reach out to me on [Twitter](https://twitter.com/tallestthomas) or shoot me a DM on [Instagram](https://instagram.com/tallestthomas).
 
 Until next time,<br/>
 -TT
-

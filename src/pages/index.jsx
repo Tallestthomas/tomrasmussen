@@ -2,10 +2,12 @@ import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
+import Hero from '../components/Hero';
 import PostListing from "../components/PostListing/PostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
-import UserLinks from '../components/UserLinks/UserLinks';
+
+import '../styles/global.scss';
 
 
 class Index extends React.Component {
@@ -15,16 +17,17 @@ class Index extends React.Component {
       <div className="index-container">
         <Helmet title={config.siteTitle} />
         <SEO postEdges={postEdges} />
+        <Hero>
+          <h1>Hello, I&apos;m Tom</h1>
+          <h3>
+I&apos;m a Javascript developer in Charlotte, NC.  I love code, command line, and pretty much anything tech
+          </h3>
+        </Hero>
         <Layout currentPath={this.props.location.pathname}>
-          <div className="hero">
-            <h1>Hello, I&apos;m Tom</h1>
-            <p>I&apos;m a fullstack javascript developer and I like to share my adventures in life and code.</p>
-            <UserLinks config={config} />
-          </div>
           <PostListing postEdges={postEdges} />
         </Layout>
       </div>
-      );
+    );
   }
 }
 
@@ -42,7 +45,7 @@ export const pageQuery = graphql`
           fields {
             slug
           }
-          excerpt
+          excerpt(pruneLength: 200)
           timeToRead
           frontmatter {
             title
