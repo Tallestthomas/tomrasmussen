@@ -16,9 +16,12 @@
   box-shadow: none;
   font-family: 'Arlo', sans-serif;
   font-weight: normal;
+  text-decoration: none;
 
   &:hover {
     color: #fefefe;
+    box-shadow: none;
     background-color: #c62641;
+    text-decoration: none;
   }
 }
