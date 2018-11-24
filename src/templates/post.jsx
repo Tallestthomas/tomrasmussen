@@ -66,11 +66,9 @@ export const pageQuery = graphql`
       timeToRead
       frontmatter {
         title
-        cover
         date
         category
         tags
-        slug
       }
       fields {
         slug
