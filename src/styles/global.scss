@@ -16,7 +16,12 @@ p {
   margin: 1rem 0;
 }
 
+span {
+  font-family: 'Lato', sans-serif;
+}
+
 a {
+  transition: all 0.25s linear;
   text-decoration: none;
   color: #c62641;
   font-weight: bold;

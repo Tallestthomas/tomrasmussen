@@ -12,19 +12,7 @@ import {
   TwitterShareButton,
   TwitterIcon,
 } from "react-share";
-import styled from 'styled-components';
 import config from "../../../data/SiteConfig";
-
-const SocialLinksContainer = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-margin: 2rem 0;
-
-div {
-cursor: pointer;
-}
-`;
 
 class SocialLinks extends Component {
   render() {
@@ -36,7 +24,7 @@ class SocialLinks extends Component {
     const filter = count => (count > 0 ? count : "");
 
     return (
-      <SocialLinksContainer>
+      <div>
         <RedditShareButton url={url} title={post.title}>
           <RedditIcon round size={iconSize} />
           <RedditShareCount url={url}>
@@ -67,8 +55,8 @@ class SocialLinks extends Component {
             {count => <div className="share-count">{filter(count)}</div>}
           </LinkedinShareCount>
         </LinkedinShareButton>
-      </SocialLinksContainer>
-        );
+      </div>
+    );
   }
 }
 
