@@ -23,6 +23,12 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-lodash",
     {
+      resolve: "gatsby-plugin-page-transitions",
+      options: {
+        transitionTime: 500
+      }
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "assets",

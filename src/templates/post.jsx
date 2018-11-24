@@ -2,6 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from 'gatsby';
 import { DiscussionEmbed } from 'disqus-react';
+import PageTransition from 'gatsby-plugin-page-transitions';
 import PostTags from "../components/PostTags/PostTags";
 import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
@@ -28,32 +29,34 @@ export default class PostTemplate extends React.Component {
     }
 
     return (
-      <div>
-        <Helmet>
-          <title>{`${post.title} | ${config.siteTitle}`}</title>
-        </Helmet>
-        <SEO postPath={slug} postNode={postNode} postSEO />
-        <Header />
-        <Hero />
-        <div className={postLayout}>
-          <div className={postContainer}>
-            <h1>{post.title}</h1>
-            <p className={postInfo}>
-              {post.date}
-              <span>/</span>
-              {postNode.timeToRead}
-              {' '}
-minute read
-            </p>
-            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-            <div className={postMeta}>
-              <PostTags tags={post.tags} />
-              <SocialLinks postPath={slug} postNode={postNode} />
-              <DiscussionEmbed shortname={config.disqusShortname} config={disqusConfig} />
+      <PageTransition>
+        <div>
+          <Helmet>
+            <title>{`${post.title} | ${config.siteTitle}`}</title>
+          </Helmet>
+          <SEO postPath={slug} postNode={postNode} postSEO />
+          <Header />
+          <Hero />
+          <div className={postLayout}>
+            <div className={postContainer}>
+              <h1>{post.title}</h1>
+              <p className={postInfo}>
+                {post.date}
+                <span>/</span>
+                {postNode.timeToRead}
+                {' '}
+                minute read
+              </p>
+              <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+              <div className={postMeta}>
+                <PostTags tags={post.tags} />
+                <SocialLinks postPath={slug} postNode={postNode} />
+                <DiscussionEmbed shortname={config.disqusShortname} config={disqusConfig} />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </PageTransition>
     );
   }
 }
