@@ -1,0 +1,7 @@
+@import '../components/Layout/layout.module.scss';
+
+.tag-container {
+  @extend .layout;
+
+  top: 20vh;
+}

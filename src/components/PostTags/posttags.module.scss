@@ -1,0 +1,27 @@
+.post-tags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.post-tag {
+  color: #c62641;
+  border: 1px solid #c62641;
+  padding: 0.25rem 0.5rem;
+  background-color: #fefefe;
+  margin: 2rem 0.25rem;
+  transition: background-color 0.25s ease-in-out;
+  text-shadow: none;
+  box-shadow: none;
+  font-family: 'Arlo', sans-serif;
+  font-weight: normal;
+  text-decoration: none;
+
+  &:hover {
+    color: #fefefe;
+    box-shadow: none;
+    background-color: #c62641;
+    text-decoration: none;
+  }
+}

@@ -1,17 +1,16 @@
 import React from "react";
 import Helmet from "react-helmet";
-import styled from 'styled-components';
+import { graphql } from 'gatsby';
+import Layout from '../components/Layout';
+import Hero from '../components/Hero';
 import PostListing from "../components/PostListing/PostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
-import UserLinks from '../components/UserLinks/UserLinks';
+
+import '../styles/global.scss';
 
 
-const Hero = styled.div`
-margin: 4rem 0;
-`;
-
-class Index extends React.Component {
+export default class Index extends React.Component {
   render() {
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
@@ -20,39 +19,42 @@ class Index extends React.Component {
         <SEO postEdges={postEdges} />
         <Hero>
           <h1>Hello, I&apos;m Tom</h1>
-          <p>I&apos;m a fullstack javascript developer and I like to share my adventures in life and code.</p>
-          <UserLinks config={config} />
+          <h3>
+            I&apos;m a Javascript developer in Charlotte, NC.  I love code, command line, and pretty much anything tech
+
+          </h3>
         </Hero>
-        <PostListing postEdges={postEdges} />
+        <Layout currentPath={this.props.location.pathname}>
+          <PostListing postEdges={postEdges} />
+        </Layout>
       </div>
-      );
+    );
   }
 }
 
-export default Index;
 
-/* eslint no-undef: "off" */
 export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(
+query IndexQuery {
+allMarkdownRemark(
       limit: 2000
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { fields: [fields___date], order: DESC  }
     ) {
       edges {
         node {
           fields {
             slug
+            date
           }
           excerpt
           timeToRead
           frontmatter {
             title
             tags
-            cover
             date
           }
         }
       }
     }
-  }
-`;
+}
+`;`
+`
