@@ -5,7 +5,7 @@ import { DiscussionEmbed } from 'disqus-react';
 import PostTags from "../components/PostTags/PostTags";
 import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
-import { postContainer, postInfo, postLayout, postMeta } from '../styles/post.module.scss';
+import { postContainer, postContent, postInfo, postLayout, postMeta } from '../styles/post.module.scss';
 import './gruvbox.css';
 import Hero from '../components/Hero'
 import config from "../../data/SiteConfig";
@@ -45,7 +45,7 @@ export default class PostTemplate extends React.Component {
               {' '}
               minute read
             </p>
-            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+            <div className={postContent}dangerouslySetInnerHTML={{ __html: postNode.html }} />
             <div className={postMeta}>
               <PostTags tags={post.tags} />
               <SocialLinks postPath={slug} postNode={postNode} />
