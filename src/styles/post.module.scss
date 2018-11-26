@@ -1,10 +1,7 @@
-@import '../components/Layout/layout.module.scss';
 @import '../components/PostListing/postlisting.module.scss';
 
 .post-layout {
-  @extend .layout;
-
-  top: 25vh;
+  top: 25vh !important;
 }
 
 .post-container {
