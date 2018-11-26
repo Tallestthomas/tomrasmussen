@@ -44,7 +44,7 @@ export default class PostTemplate extends React.Component {
             <SEO postPath={slug} postNode={postNode} postSEO />
             <Header />
             <Hero />
-            <div className="layout post-layout">
+            <div className={`${postLayout} layout`}>
               <div className={postContainer}>
                 <h1>{post.title}</h1>
                 <p className={postInfo}>
