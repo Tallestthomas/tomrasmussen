@@ -1,7 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from 'gatsby';
-import {  Transition } from 'react-spring';
+import {  Transition, config as transitionConfig} from 'react-spring';
 import { DiscussionEmbed } from 'disqus-react';
 import PostTags from "../components/PostTags/PostTags";
 import SocialLinks from "../components/SocialLinks/SocialLinks";
@@ -34,6 +34,7 @@ export default class PostTemplate extends React.Component {
         from={{ opacity: 0 }}
         enter={{ opacity: 1 }}
         leave={{ opacity: 0 }}
+        config={transitionConfig.slow}
       >
         {post => 
         post && (props => (
@@ -44,7 +45,7 @@ export default class PostTemplate extends React.Component {
             <SEO postPath={slug} postNode={postNode} postSEO />
             <Header />
             <Hero />
-            <div className="layout post-layout">
+            <div className={`${postLayout} layout`}>
               <div className={postContainer}>
                 <h1>{post.title}</h1>
                 <p className={postInfo}>
@@ -52,7 +53,7 @@ export default class PostTemplate extends React.Component {
                   <span>/</span>
                   {postNode.timeToRead}
                   {' '}
-                minute read
+                  minute read
                 </p>
                 <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
                 <div className={postMeta}>
@@ -61,15 +62,17 @@ export default class PostTemplate extends React.Component {
                   <DiscussionEmbed shortname={config.disqusShortname} config={disqusConfig} />
                 </div>
               </div>
-))
+            </div>
+          </div>
+          ))
         }
       </Transition>
     );
   }
-}
+  }
 
-/* eslint no-undef: "off" */
-export const pageQuery = graphql`
+  /* eslint no-undef: "off" */
+  export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
@@ -85,4 +88,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+  `;
