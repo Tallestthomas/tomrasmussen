@@ -25,6 +25,13 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
+        name: "posts",
+        path: `${__dirname}/content/`
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
         name: "assets",
         path: `${__dirname}/static/`
       }
