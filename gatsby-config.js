@@ -25,15 +25,15 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "assets",
-        path: `${__dirname}/static/`
+        name: "posts",
+        path: `${__dirname}/content/`
       }
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "posts",
-        path: `${__dirname}/content/`
+        name: "assets",
+        path: `${__dirname}/static/`
       }
     },
     {
@@ -167,6 +167,8 @@ module.exports = {
           }
         ]
       }
-    }
+    },
+    "gatsby-plugin-netlify-cms",
+    "gatsby-plugin-netlify"
   ]
 };
