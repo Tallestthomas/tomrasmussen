@@ -36,7 +36,7 @@ class PostListing extends React.Component {
                     </Link>
                   </h1>
                   <p className={postListingMeta}>
-                    {node.frontmatter.date} 
+                    {node.frontmatter.date.split('T')[0]} 
                     {' '}
                     <span style={{marginLeft: '2rem'}}>
                       {node.timeToRead}

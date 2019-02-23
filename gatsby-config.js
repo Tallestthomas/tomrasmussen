@@ -168,14 +168,7 @@ module.exports = {
         ]
       }
     },
-<<<<<<< HEAD
-    {
-      resolve: 'gatsby-plugin-netlify-cms',
-    },
-    'gatsby-plugin-netlify',
-=======
     "gatsby-plugin-netlify-cms",
     "gatsby-plugin-netlify"
->>>>>>> 08958d6a1e068734acd6a4f7e4c7d30ac86ef05d
   ]
 };

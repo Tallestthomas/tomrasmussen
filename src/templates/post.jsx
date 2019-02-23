@@ -49,7 +49,7 @@ export default class PostTemplate extends React.Component {
               <div className={postContainer}>
                 <h1>{post.title}</h1>
                 <p className={postInfo}>
-                  {post.date}
+                  {post.date.split('T')[0]}
                   <span>/</span>
                   {postNode.timeToRead}
                   {' '}
@@ -88,4 +88,4 @@ export default class PostTemplate extends React.Component {
       }
     }
   }
-  `;
+`;

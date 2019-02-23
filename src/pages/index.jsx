@@ -11,33 +11,29 @@ import Header from '../components/Header';
 import '../styles/global.scss';
 
 
-export default class Index extends React.Component {
-  render() {
-    const { data } = this.props;
-    const { allMarkdownRemark } = data;
-    const { edges } = allMarkdownRemark;
-    const postEdges = edges;
+const Index = ({ data }) => { 
+  const { allMarkdownRemark } = data;
+  const { edges } = allMarkdownRemark;
+  const postEdges = edges;
+  return (
+    <Layout>
+      <div className="index-container">
+        <Helmet title={config.siteTitle} />
+        <SEO postEdges={postEdges} />
+        <Header />
+        <Hero>
+          <h1>Hello, I&apos;m Tom</h1>
+          <h3>
+            I&apos;m a Javascript developer in Charlotte, NC.  I love code, command line, and pretty much anything tech
 
-    return (
-      <Layout>
-        <div className="index-container">
-          <Helmet title={config.siteTitle} />
-          <SEO postEdges={postEdges} />
-          <Header />
-          <Hero>
-            <h1>Hello, I&apos;m Tom</h1>
-            <h3>
-              I&apos;m a Javascript developer in Charlotte, NC.  I love code, command line, and pretty much anything tech
-
-            </h3>
-          </Hero>
-          <div className="layout">
-            <PostListing postEdges={postEdges} />
-          </div>
+          </h3>
+        </Hero>
+        <div className="layout">
+          <PostListing postEdges={postEdges} />
         </div>
-      </Layout>
-    );
-  }
+      </div>
+    </Layout>
+  );
 }
 
 
@@ -45,12 +41,13 @@ export const pageQuery = graphql`
 query IndexQuery {
 allMarkdownRemark(
       limit: 2000
-      sort: { fields: [frontmatter___date], order: DESC  }
+      sort: { fields: [fields___date], order: DESC  }
     ) {
       edges {
         node {
           fields {
             slug
+            date
           }
           excerpt
           timeToRead
@@ -65,3 +62,4 @@ allMarkdownRemark(
 }
 `
 
+export default Index;
