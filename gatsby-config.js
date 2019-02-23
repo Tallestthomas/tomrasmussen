@@ -168,5 +168,9 @@ module.exports = {
         ]
       }
     },
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+    },
+    'gatsby-plugin-netlify',
   ]
 };
