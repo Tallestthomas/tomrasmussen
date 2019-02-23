@@ -2,7 +2,10 @@
 title: Let's try this again
 date: 2019-02-23T04:06:38.323Z
 category: Tech
-tabs: 'programming, stuff, other'
+tags:
+  - programming
+  - stuff
+  - other
 ---
 Hello, everyone, and welcome to my new and improved blog. Okay, so it really isn't new, and it's not _that_ improved, but it needed a fresh start. I took some design inspiration from [Medium](https://medium.com) as far as text width, and I just picked some colors I liked, and here we are.
 
