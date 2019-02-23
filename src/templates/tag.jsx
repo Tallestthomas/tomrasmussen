@@ -7,10 +7,9 @@ import { tagContainer } from '../styles/tags.module.scss';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 
-export default class TagTemplate extends React.Component {
-  render() {
-    const tag = this.props.pathContext.tag;
-    const postEdges = this.props.data.allMarkdownRemark.edges;
+const TagTemplate = ({ data, pathContext }) => {
+    const { tag } = pathContext;
+    const postEdges = data.allMarkdownRemark.edges;
     return (
       <div>
         <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
@@ -21,10 +20,8 @@ export default class TagTemplate extends React.Component {
         </div>
       </div>
     );
-  }
 }
 
-/* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query TagPage($tag: String) {
     allMarkdownRemark(
@@ -49,3 +46,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export default TagTemplate;
