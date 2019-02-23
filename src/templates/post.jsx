@@ -6,7 +6,7 @@ import { DiscussionEmbed } from 'disqus-react';
 import PostTags from "../components/PostTags/PostTags";
 import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
-import { postContainer, postContent, postInfo, postLayout, postMeta } from '../styles/post.module.scss';
+import { postContainer, postInfo, postLayout, postMeta } from '../styles/post.module.scss';
 import './gruvbox.css';
 import Hero from '../components/Hero'
 import config from "../../data/SiteConfig";
@@ -64,15 +64,15 @@ export default class PostTemplate extends React.Component {
               </div>
             </div>
           </div>
-          ))
+        ))
         }
       </Transition>
     );
   }
-  }
+}
 
-  /* eslint no-undef: "off" */
-  export const pageQuery = graphql`
+/* eslint no-undef: "off" */
+export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
