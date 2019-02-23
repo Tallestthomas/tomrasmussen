@@ -2,7 +2,10 @@
 title: Why you should (probably not) use Vim
 date: 2019-02-23T04:51:39.961Z
 category: Tech
-tabs: 'programming, javascript, vim, neovim'
+tags:
+  - programming
+  - neovim
+  - vim
 ---
 TLDR: Use VSCode unless you're willing to spend the time to learn Vim
 and its motions.
