@@ -169,12 +169,12 @@ module.exports = {
               }
             }
           `,
-              output: config.siteRss
-            }
-          ]
-        }
-      },
-      "gatsby-plugin-netlify-cms",
-      "gatsby-plugin-netlify"
-    ]
+            output: config.siteRss
+          }
+        ]
+      }
+    },
+    "gatsby-plugin-netlify-cms",
+    "gatsby-plugin-netlify"
+  ]
 };
