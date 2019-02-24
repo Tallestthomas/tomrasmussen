@@ -13,8 +13,7 @@ module.exports = {
   disqusShortname: 'tom-rasmussen-gatsby-blog', // Disqus shortname.
   postDefaultCategoryID: 'Tech', // Default category for posts.
   userName: 'TallestThomas', // Username to display in the author segment.
-  userTwitter: '', // Optionally renders "Follow Me" in the UserInfo segment.
-  userLocation: 'Long Island, New York', // User location to display in the author segment.
+  userLocation: 'Charlotte, North Carolina', // User location to display in the author segment.
   userAvatar: 'https://api.adorable.io/avatars/150/test.png', // User avatar to display in the author segment.
   userDescription: '', // User description to display in the author segment.
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
@@ -40,7 +39,7 @@ module.exports = {
       path: '/social/email.svg',
     },
   ],
-  copyright: 'Copyright Tom Rasmussen © 2018.', // Copyright string for the footer of the website and RSS feed.
+  copyright: 'Copyright Tom Rasmussen © 2019.', // Copyright string for the footer of the website and RSS feed.
   themeColor: '#990000', // Used for setting manifest and progress theme colors.
   backgroundColor: '#e0e0e0', // Used for setting manifest background color.
 };

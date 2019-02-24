@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import {  
   FacebookIcon,
   FacebookShareButton,
@@ -18,9 +18,7 @@ import {
 } from './social-links.module.scss';
 import config from "../../../data/SiteConfig";
 
-class SocialLinks extends Component {
-  render() {
-    const { postNode, postPath, mobile } = this.props;
+const SocialLinks = ({ postNode, postPath, mobile}) => {
     const post = postNode.frontmatter;
     const url = config.siteUrl + config.pathPrefix + postPath;
 
@@ -62,6 +60,5 @@ class SocialLinks extends Component {
       </div>
         );
   }
-}
 
 export default SocialLinks;

@@ -1,44 +1,36 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from 'gatsby';
-import {  Transition, config as transitionConfig} from 'react-spring';
 import { DiscussionEmbed } from 'disqus-react';
 import PostTags from "../components/PostTags/PostTags";
 import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
-import { postContainer, postContent, postInfo, postLayout, postMeta } from '../styles/post.module.scss';
+import { postContainer, postInfo, postLayout, postMeta } from '../styles/post.module.scss';
 import './gruvbox.css';
 import Hero from '../components/Hero'
 import config from "../../data/SiteConfig";
 import Header from "../components/Header";
 
-export default class PostTemplate extends React.Component {
-  render() {
-    const { slug } = this.props.pathContext;
-    const postNode = this.props.data.markdownRemark;
-    const post = postNode.frontmatter;
-    if (!post.id) {
-      post.id = slug;
-    }
-    if (!post.category_id) {
-      post.category_id = config.postDefaultCategoryID;
-    }
-    const disqusConfig = {
-      identifier : post.slug,
-      title: post.title
-    }
+const PostTemplate = ({ pathContext, data }) => {
+  const { slug } = pathContext;
+  const postNode = data.markdownRemark;
+  const post = postNode.frontmatter;
+  if (!post.id) {
+    post.id = slug;
+  }
+  if (!post.category_id) {
+    post.category_id = config.postDefaultCategoryID;
+  }
+  const disqusConfig = {
+    identifier : post.slug,
+    title: post.title
+  }
 
-    return (
-      <Transition
-        items={post}
-        from={{ opacity: 0 }}
-        enter={{ opacity: 1 }}
-        leave={{ opacity: 0 }}
-        config={transitionConfig.slow}
-      >
-        {post => 
-        post && (props => (
-          <div style={props}>
+  return (
+    <div>
+      {
+        post && (
+          <div>
             <Helmet>
               <title>{`${post.title} | ${config.siteTitle}`}</title>
             </Helmet>
@@ -49,7 +41,7 @@ export default class PostTemplate extends React.Component {
               <div className={postContainer}>
                 <h1>{post.title}</h1>
                 <p className={postInfo}>
-                  {post.date}
+                  {post.date.split('T')[0]}
                   <span>/</span>
                   {postNode.timeToRead}
                   {' '}
@@ -64,15 +56,14 @@ export default class PostTemplate extends React.Component {
               </div>
             </div>
           </div>
-          ))
-        }
-      </Transition>
-    );
-  }
-  }
+        )}
+    </div>
+  );
+}
 
-  /* eslint no-undef: "off" */
-  export const pageQuery = graphql`
+
+/* eslint no-undef: "off" */
+export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
@@ -88,4 +79,6 @@ export default class PostTemplate extends React.Component {
       }
     }
   }
-  `;
+`;
+
+export default PostTemplate;
