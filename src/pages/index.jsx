@@ -11,29 +11,29 @@ import Header from '../components/Header';
 import '../styles/global.scss';
 
 
-export default class Index extends React.Component {
-  render() {
-    const postEdges = this.props.data.allMarkdownRemark.edges;
-    return (
-      <Layout>
-        <div className="index-container">
-          <Helmet title={config.siteTitle} />
-          <SEO postEdges={postEdges} />
-          <Header />
-          <Hero>
-            <h1>Hello, I&apos;m Tom</h1>
-            <h3>
-              I&apos;m a Javascript developer in Charlotte, NC.  I love code, command line, and pretty much anything tech
+const Index = ({ data }) => { 
+  const { allMarkdownRemark } = data;
+  const { edges } = allMarkdownRemark;
+  const postEdges = edges;
+  return (
+    <Layout>
+      <div className="index-container">
+        <Helmet title={config.siteTitle} />
+        <SEO postEdges={postEdges} />
+        <Header />
+        <Hero>
+          <h1>Hello, I&apos;m Tom</h1>
+          <h3>
+            I&apos;m a Javascript developer in Charlotte, NC.  I love code, command line, and pretty much anything tech
 
-            </h3>
-          </Hero>
-          <div className="layout">
-            <PostListing postEdges={postEdges} />
-          </div>
+          </h3>
+        </Hero>
+        <div className="layout">
+          <PostListing postEdges={postEdges} />
         </div>
-      </Layout>
-    );
-  }
+      </div>
+    </Layout>
+  );
 }
 
 
@@ -60,5 +60,6 @@ allMarkdownRemark(
       }
     }
 }
-`;`
 `
+
+export default Index;

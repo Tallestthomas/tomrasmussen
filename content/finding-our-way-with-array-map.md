@@ -1,13 +1,11 @@
 ---
-title: "Finding our way with array.map"
-date: "04/24/2018"
-category: "Tech"
-slug: "finding-our-way-with-array-map"
-tag:
+title: Finding our way with array.map
+date: 2019-02-23T04:08:25.405Z
+category: Tech
+tags:
   - programming
   - javascript
 ---
-
 Howdy folks, I've been quite busy lately and haven't had much time to write anything. If you don't follow me on [Instagram](https://instagram.com/tallestthomas), I recently accepted a new job
 as a Front End javascript developer, but the roles in another state, so I've had my hands full. Anyway, things have settled a bit, so I wanted to get something out for you all to enjoy.
 
