@@ -123,4 +123,5 @@ If you were to use an arrow function to define `firstFunc` it would actually res
 If it doesn't, or this has just made you even more confused, leave a comment down below, [reach out to me on twitter](https://twitter.com/tallestthomas) or [instagram](https://instagram.com/tallestthomas). 
 
 Until next week,
-- TT
+
+-TT
