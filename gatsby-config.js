@@ -109,7 +109,6 @@ module.exports = {
           ]
         }
       },
->>>>>>> develop
       "gatsby-plugin-offline",
       {
         resolve: "gatsby-plugin-feed",
