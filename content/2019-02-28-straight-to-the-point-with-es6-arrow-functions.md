@@ -7,7 +7,7 @@ tags:
   - programming
   - learning
 ---
-Hello hello hello, long time no see everyone.  Since my last post, I've been super busy at my **amazing friggin job at Red Ventures**.  I've been learning a whole ton, and teaching a whole bunch too. Which has lead me to want to start writing again.
+Hello hello hello, long time no see everyone.  Since my last post, I've been super busy at my **amazing friggin job at [Red Ventures](https://redventures.com)**.  I've been learning a whole ton, and teaching a whole bunch too. Which has lead me to want to start writing again.
 
 So, I'll be trying to write more, but shorter, posts. Just to give some quick insight on some javascript topics that I found a bit confusing when I first started. The general idea is to at least post something every Friday for y'all to enjoy.
 
@@ -33,7 +33,7 @@ This does the same exact thing as the previous example, but it looks a little bi
 ```javascript
 const addNumber = (a,b) => a + b;
 ```
-### Booyeah, that's some sexy code.
+### Booyah, that's some sexy code.
 
 But in all seriousness, arrow functions clean up a lot of the mess that can happen *I'm look at you __functoin__*.  They also have another important feature.
 
