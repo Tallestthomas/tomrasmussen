@@ -10,14 +10,15 @@ body {
 }
 
 p {
-  font-family: 'Lato', Sans-Serif;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
   font-size: 20px;
   line-height: 1.7rem;
   margin: 1rem 0;
 }
 
 span {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Work Sans', sans-serif;
 }
 
 a {
@@ -60,7 +61,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Arvo', Serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 @media screen and (min-width: 769px) {

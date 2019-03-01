@@ -21,13 +21,21 @@ module.exports = {
     plugins: [
       "gatsby-plugin-sass",
       "gatsby-plugin-react-helmet",
-      {
-        resolve: 'gatsby-plugin-webpack-bundle-analyzer',
-        options: {
-          analyzerPort: 3000,
-        },
-      },
       "gatsby-plugin-lodash",
+      {
+        resolve: 'gatsby-plugin-prefetch-google-fonts',
+        options: {
+          fonts: [
+            {
+              family: 'Work Sans',
+              variants: ['300', '300i', '400']
+            },
+            {
+              family: 'Montserrat'
+            }
+          ]
+        }
+      },
       {
         resolve: "gatsby-source-filesystem",
         options: {
