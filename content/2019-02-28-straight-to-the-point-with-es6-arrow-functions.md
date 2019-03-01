@@ -9,7 +9,7 @@ tags:
 ---
 Hello hello hello, long time no see everyone.  Since my last post, I've been super busy at my **amazing friggin job at Red Ventures**.  I've been learning a whole ton, and teaching a whole bunch too. Which has lead me to want to start writing again.
 
-So, I'll be trying to write more, but shorter, posts. Just to give some quick insight on some javascript topics that I found a bit confusing when I first started.
+So, I'll be trying to write more, but shorter, posts. Just to give some quick insight on some javascript topics that I found a bit confusing when I first started. The general idea is to at least post something every Friday for y'all to enjoy.
 
 ## First up: Arrow Functions
 
@@ -38,3 +38,89 @@ const addNumber = (a,b) => a + b;
 But in all seriousness, arrow functions clean up a lot of the mess that can happen *I'm look at you __functoin__*.  They also have another important feature.
 
 ### The problem with 'this'
+
+When using a normal ES5 function, it creates is own binding of the 'this' keyword, aka it always binds to the owner of the function. Consider the following example.
+
+```javascript
+var oldFunction = function() {
+  console.log(this);
+}
+```
+
+If you were to run this function, it would print out the `window` object because `this` is actually bound to it in this instance. Now let's say you used that as an object method.
+
+```javascript
+var testObj = {
+  string: 'this is a string',
+  firstFunc: function() {
+    console.log(this.string);
+  }
+}
+```
+
+What do you think this would print? That's, right `'this is a string'` because it `this` references `testObj`.  Now what if we wanted to use this in side of a nested function?
+
+```javascript
+var testObj = {  
+  person: 'Tom',  
+  foods: ['apples', 'tacos', 'burritos'],  
+  firstFunc: function() {    
+    this.foods.forEach(function(food) {      
+      console.log(`${this.person} wants to eat ${food}`);    
+    })
+  }
+};
+
+testObj.firstFunc();
+// undefined wants to eat apples
+// undefined wants to eat tacos
+// undefined wants to eat burritos
+```
+
+`this.person` is `undefined` because there is now `person` defined inside of `firstFunc`. That's a little confusing, right? In order for you to use `this.person` inside of that `forEach` loop, you'd have to do something like this.
+
+```javascript
+firstFunc: function() {
+  var _this = this;
+  this.foods.forEach(function(food){
+    console.log(`${_this.person} wants to eat ${food}`);
+  });
+}
+```
+
+Or you could use the ES5.1 function `.bind` to make it a little bit easier:
+
+```javascript
+firstFunc: function() {
+  this.foods.forEach(function(food){
+    console.log(`${this.person} wants to eat ${food}`);
+  }.bind(this));
+}
+```
+### A little bit nicer, but still not pretty.
+
+Now, let's rewrite that same method using arrow functions, shall we?
+
+
+```javascript
+firstFunc: function() {
+  // Whatever 'this' is out here
+  this.foods.forEach(food => {
+     // Is what 'this' is in here
+    console.log(`${this.person} wants to eat ${food}`);
+  });
+}
+```
+
+You would still use the `function` key word, for the initial declaration of `firstFunc`, but inside of the `forEach` you would use an arrow function because then `this` would reference whatever it is defined as inside of `firstFunc`.
+
+If you were to use an arrow function to define `firstFunc` it would actually result in a `TypeError: Cannot read property 'forEach' of undefined` because it would be trying to look for a `foods` field in the `window` object.
+
+*hooray javascript*
+
+## Anyway, I hope this clears up some of the mystery around arrow functions and why you would use them.
+
+If it doesn't, or this has just made you even more confused, leave a comment down below, [reach out to me on twitter](https://twitter.com/tallestthomas) or [instagram](https://instagram.com/tallestthomas). 
+
+Until next week,
+- TT
