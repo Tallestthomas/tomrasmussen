@@ -4,39 +4,39 @@
   z-index: 2000;
   top: 0;
   color: #fefefe;
-  background-color: #c62641;
+  background-color: #b20303;
 
   a {
     text-decoration: none;
     color: #fefefe;
     font-weight: bold;
     text-shadow:
-      0 -2px 0 #c62641,
-      0 -1px 0 #c62641,
-      0 0 0 #c62641,
-      2px -2px 0 #c62641,
-      2px -1px 0 #c62641,
-      2px 0 0 #c62641,
-      -2px -2px 0 #c62641,
-      -2px -1px 0 #c62641,
-      -2px 0 0 #c62641,
-      1px -2px 0 #c62641,
-      1px -1px 0 #c62641,
-      1px 0 0 #c62641,
-      -1px -2px 0 #c62641,
-      -1px -1px 0 #c62641,
-      -1px 0 0 #c62641,
-      0 -2px 0 #c62641,
-      0 -1px 0 #c62641,
-      0 0 0 #c62641;
+      0 -2px 0 #b20303,
+      0 -1px 0 #b20303,
+      0 0 0 #b20303,
+      2px -2px 0 #b20303,
+      2px -1px 0 #b20303,
+      2px 0 0 #b20303,
+      -2px -2px 0 #b20303,
+      -2px -1px 0 #b20303,
+      -2px 0 0 #b20303,
+      1px -2px 0 #b20303,
+      1px -1px 0 #b20303,
+      1px 0 0 #b20303,
+      -1px -2px 0 #b20303,
+      -1px -1px 0 #b20303,
+      -1px 0 0 #b20303,
+      0 -2px 0 #b20303,
+      0 -1px 0 #b20303,
+      0 0 0 #b20303;
     box-shadow:
-      0 -1px 0 0 #c62641 inset,
+      0 -1px 0 0 #b20303 inset,
       0 -2px 0 0 transparent inset;
 
     &:hover {
       transition: all 0.3s ease-out;
       box-shadow:
-        0 -1px 0 0 #c62641 inset,
+        0 -1px 0 0 #b20303 inset,
         0 -2px 0 0 #fefefe inset;
     }
   }

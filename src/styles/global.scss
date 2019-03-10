@@ -6,7 +6,8 @@
 
 body {
   font-size: 16px;
-  color: #444;
+  color: #555;
+  line-height: 1.5;
 }
 
 p {
@@ -25,37 +26,37 @@ a {
   font-family: 'Montserrat', sans-serif;
   transition: all 0.25s linear;
   text-decoration: none;
-  color: #c62641;
+  color: #b20303;
   font-weight: bold;
   text-shadow:
-    0 -2px 0 white,
-    0 -1px 0 white,
-    0 0 0 white,
-    2px -2px 0 white,
-    2px -1px 0 white,
-    2px 0 0 white,
-    -2px -2px 0 white,
-    -2px -1px 0 white,
-    -2px 0 0 white,
-    1px -2px 0 white,
-    1px -1px 0 white,
-    1px 0 0 white,
-    -1px -2px 0 white,
-    -1px -1px 0 white,
-    -1px 0 0 white,
-    0 -2px 0 white,
-    0 -1px 0 white,
-    0 0 0 white;
+    0 -2px 0 #fefefe,
+    0 -1px 0 #fefefe,
+    0 0 0 #fefefe,
+    2px -2px 0 #fefefe,
+    2px -1px 0 #fefefe,
+    2px 0 0 #fefefe,
+    -2px -2px 0 #fefefe,
+    -2px -1px 0 #fefefe,
+    -2px 0 0 #fefefe,
+    1px -2px 0 #fefefe,
+    1px -1px 0 #fefefe,
+    1px 0 0 #fefefe,
+    -1px -2px 0 #fefefe,
+    -1px -1px 0 #fefefe,
+    -1px 0 0 #fefefe,
+    0 -2px 0 #fefefe,
+    0 -1px 0 #fefefe,
+    0 0 0 #fefefe;
   box-shadow:
-    0 -1px 0 0 white inset,
+    0 -1px 0 0 #fefefe inset,
     0 -2px 0 0 transparent inset;
 }
 
 a:hover {
   transition: all 0.3s ease-out;
   box-shadow:
-    0 -1px 0 0 white inset,
-    0 -2px 0 0 #c62641 inset;
+    0 -1px 0 0 #fefefe inset,
+    0 -2px 0 0 #b20303 inset;
 }
 
 h1,
@@ -115,3 +116,4 @@ h4 {
   width: 100vw;
   z-index: 999;
 }
+
