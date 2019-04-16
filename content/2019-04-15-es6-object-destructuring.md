@@ -1,6 +1,6 @@
 ---
 title: ES6 Object Destructuring
-date: 2019-04-16T02:30:25.024Z
+date: 2019-04-17T02:30:25.024Z
 category: ES6
 tags:
   - javascript
