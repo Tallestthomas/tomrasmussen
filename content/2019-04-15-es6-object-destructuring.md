@@ -7,16 +7,16 @@ tags:
   - programming
   - learning
 ---
-Recently, due to our ESLint configuration, I've been using object destructuring a lot when it comes to writing functions that require use of `props` and `state` in my React components.
+Recently, due to our ESLint configuration at work, I've been using object destructuring a lot. This was added as a way to directly grab values from an object with much cleaner syntax.
 
 A basic example of this would be along the lines of 
 ```javascript
 const { theme } = this.props;
 ```
 
-This would just return the value of the `theme` key from `this.props`. It cleans up the syntax a bit, because otherwise it would look something like this.
+This would just return the value of the `theme` key from `this.props`.  Using ES5 syntax it would look something like this.
 ```javascript
-const theme = this.props.theme;
+var theme = this.props.theme;
 ```
 
 If you need to import multiple variables you can use commas to separate them:
